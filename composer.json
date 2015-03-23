@@ -1,6 +1,6 @@
 {
-  "name":"xendk/proctor",
-  "description":"Site testing framework.",
+  "name":"xendk/eyes",
+  "description":"Applitools Eyes module for Codeception.",
   "license":"GPL-2.0+",
   "authors":[
     { "name" : "Thomas Fini Hansen", "email": "xen@xen.dk" }
