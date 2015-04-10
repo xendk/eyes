@@ -3,7 +3,7 @@
 namespace Codeception\Module;
 
 use Codeception\TestCase;
-use Eyes\CoProcess;
+use Codeception\Module\Eyes\CoProcess;
 
 class Eyes extends \Codeception\Module
 {
@@ -22,7 +22,7 @@ class Eyes extends \Codeception\Module
      */
     public function eyeball($tag)
     {
-        if (!$this->config['enabled']) {
+      if (!$this->config['enabled']) {
             return;
         }
         if (!$this->monocular) {
@@ -52,7 +52,7 @@ class Eyes extends \Codeception\Module
      */
     protected function startMonocular()
     {
-        $script = dirname(dirname(dirname(__DIR__))) . '/monocular/monocular.js';
+        $script = dirname(__DIR__) . '/monocular/monocular.js';
         $commandLine = implode(' ', array('node', $script, '-d'));
         $this->monocular = new CoProcess($commandLine);
 
