@@ -62,7 +62,7 @@ class Eyes extends \Codeception\Module
         // Initialize.
         $this->send('init', [
             'apiKey' => $this->config['api_key'],
-            'os' => php_uname('a'),
+            'os' => php_uname('s'),
             'browser' => $browser,
         ]);
         // throw new \Codeception\Exception\ModuleConfig(__CLASS__, "messge")
